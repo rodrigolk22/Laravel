@@ -47,7 +47,7 @@
 
 - In terminal run php artisan migrate
 
-- Open the public/index.php file and press Ctrl + F5 and select Launch build-in server.
+- Run php artisan serve and access http://127.0.0.1:8000
 
 
 ## Languages, dependencies and libs used :books:
