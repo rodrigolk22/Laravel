@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1>Laravel project using VS Code, XAMPP</h1> 
 
 <p align="center">
 <img src="https://img.shields.io/badge/PHP-8.2.12-green?style=flat" alt="PHP" />
@@ -13,7 +13,7 @@
 ## Project Description 
 
 <p align="justify">
-  A simple Laravel project using VS Code IDE. 
+  A sample Laravel project using VS Code IDE. 
 </p>
 
 ## Functions
@@ -22,17 +22,32 @@
 
 ## Requirements
 
-:warning: [Visual Studio Code](https://code.visualstudio.com/download)
+- [Visual Studio Code](https://code.visualstudio.com/download)
+- [PHP](https://www.php.net/)
+- [Composer](https://getcomposer.org/download/)
+- [MySQL](https://www.mysql.com/)
 
+## How to run the project :arrow_forward:
 
-## How to install laravel :arrow_forward:
+- Create a local MySQL database using XAMPP
 
-Install [PHP](https://www.php.net/)
+- After installation set a password for root user in MySql Database
+> mysqladmin.exe -u root password root
 
-Install [Composer](https://getcomposer.org/download/)
+- Add this code in C:\xampp\apache\conf\extrahttpd-vhosts.conf
 
-Open Command Palette F1 and type create project. Then write laravel/laravel and confirm.
+```script
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/htdocs"
+    ServerName localhost
+</VirtualHost>
+```
 
+- Use phpMyAdmin to create a database with a name 'laravel'
+
+- In terminal run php artisan migrate
+
+- Open the public/index.php file and press Ctrl + F5 and select Launch build-in server.
 
 
 ## Languages, dependencies and libs used :books:
@@ -40,17 +55,18 @@ Open Command Palette F1 and type create project. Then write laravel/laravel and 
 - [PHP](https://www.php.net/)
 - [Composer](https://getcomposer.org/download/)
 - [All-in-One PHP support](https://marketplace.visualstudio.com/items?itemName=DEVSENSE.phptools-vscode)
-
+- [XAMPP](https://www.apachefriends.org/pt_br/index.html)
 
 ## Issues :exclamation:
 
-Composer error in Laravel build:
+I found some Composer errors while trying to build Laravel:
 
-Uncomment this following lines in php.ini
+For fix some errors, i uncomment this following lines in php.ini
 
 > extension=fileinfo
 
 > extension=openssl
+
 
 ## Developer :octocat:
 
