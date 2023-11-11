@@ -47,7 +47,15 @@
 
 - In terminal run php artisan migrate
 
-- Run php artisan serve and access http://127.0.0.1:8000
+- run npm
+
+> npm run dev
+
+- Run artisan
+
+> php artisan serve
+
+- access http://127.0.0.1:8000
 
 
 ## Languages, dependencies and libs used :books:
