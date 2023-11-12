@@ -25,6 +25,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/linkstorage', function () {
+    Artisan::call('storage:link');
+});
+
 Route::middleware('auth')->group(function () {
     /* Profile routes */
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

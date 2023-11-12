@@ -22,8 +22,12 @@ class VehicleController extends Controller
             'brand_id' => 'required',
             'model_id' => 'required',
             'price' => 'required',
-            'image_path' => 'required'
+            'image_path' => 'required|image'
         ]);
+
+        $path = request()->file('image_path')->store('public/images');
+
+        $data['image_path'] = str_replace("public/", "", $path);
 
         $newvehicle = Vehicle::create($data);
 
@@ -40,8 +44,12 @@ class VehicleController extends Controller
             'brand_id' => 'required',
             'model_id' => 'required',
             'price' => 'required',
-            'image_path' => 'required'
+            'image_path' => 'required|image'
         ]);
+
+        $path = request()->file('image_path')->store('public/images');
+
+        $data['image_path'] = str_replace("public/", "", $path);
 
         $vehicle->update($data);
 

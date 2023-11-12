@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Crie um veículo</h1>
-    <form method="post" action="{{route('vehicle.store')}}">
+    <form method="post" action="{{route('vehicle.store')}}" enctype="multipart/form-data">
         @csrf
         @method('post')
         <div>
@@ -20,7 +20,7 @@
             <label>Preço</label>
             <input type="number" placeholder="0.00" required name="price" min="0" value="0" step="0.01" pattern="^\d+(?:\.\d{1,2})?$"/>
             <label>Imagem</label>
-            <input type="text" name="image_path" placeholder="imagem"/>
+            <input type="file" name="image_path" placeholder="imagem"/>
         </div>
         <div>
             <input type="submit" value="Gravar"/>
