@@ -33,10 +33,10 @@
                 <tr>
                     <td>{{$vehicle->id}}</td>
                     <td>{{$vehicle->name}}</td>
-                    <td>{{$vehicle->brand_id}}</td>
-                    <td>{{$vehicle->model_id}}</td>
+                    <td>{{$vehicle->brand->name}}</td>
+                    <td>{{$vehicle->model->name}}</td>
                     <td>{{$vehicle->price}}</td>
-                    <td><img src="{{ url('storage/'.$vehicle->image_path) }}" alt=""></td>
+                    <td><img src="{{ url('storage//'.$vehicle->image_path) }}" alt=""></td>
                     <td>
                         <a href="{{route('vehicle.edit', ['vehicle' => $vehicle])}}">Editar</a>
                     </td>

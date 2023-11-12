@@ -2,18 +2,24 @@
 
 namespace App\Http\Controllers;
 use App\Models\Vehicle;
+use App\Models\VehicleModel;
+use App\Models\Brand;
 
 use Illuminate\Http\Request;
 
 class VehicleController extends Controller
 {
     public function index(){
-        $vehicles = Vehicle::all();
-        return view("vehicle.index", ['vehicles' => $vehicles]);
+        $vehicles = Vehicle::with('model', 'brand')->get();
+        $viewData = ['vehicles'];
+        return view("vehicle.index", compact($viewData));
     }
 
     public function create(){
-        return view("vehicle.create");
+        $vehicle_models = VehicleModel::all();
+        $brands = Brand::all();
+        $viewData = ['vehicle_models', 'brands'];
+        return view("vehicle.create", compact($viewData));
     }
 
     public function store(Request $request){
@@ -35,7 +41,10 @@ class VehicleController extends Controller
     }
 
     public function edit(Vehicle $vehicle){
-        return view('vehicle.edit', ['vehicle'=> $vehicle]);
+        $vehicle_models = VehicleModel::all();
+        $brands = Brand::all();
+        $viewData = ['vehicle_models', 'brands', 'vehicle'];
+        return view('vehicle.edit', compact($viewData));
     }
 
     public function update(Request $request, Vehicle $vehicle){

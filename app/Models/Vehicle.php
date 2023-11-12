@@ -17,4 +17,14 @@ class Vehicle extends Model
         'price',
         'image_path'
     ];
+
+    public function brand()
+    {
+        return $this->belongsTo(Brand::class)->withDefault();
+    }
+
+    public function model()
+    {
+        return $this->belongsTo(VehicleModel::class)->withDefault();
+    }
 }

@@ -14,9 +14,19 @@
             <label>Nome</label>
             <input type="text" name="name" placeholder="nome" value="{{$vehicle->name}}"/>
             <label>Marca</label>
-            <input type="text" name="brand_id" placeholder="marca" value="{{$vehicle->brand_id}}"/>
+            <select  id="brand-dropdown" class="form-control" name="brand_id">
+                <option value="">-- Selecione a marca --</option>
+                @foreach ($brands as $brand)
+                <option value="{{$brand->id}}" {{ ( $brand->id == $vehicle->brand_id) ? 'selected' : '' }}> {{ $brand->name }} </option>
+                @endforeach
+            </select>
             <label>Modelo</label>
-            <input type="text" name="model_id" placeholder="modelo" value="{{$vehicle->model_id}}"/>
+            <select  id="vehicle-model-dropdown" class="form-control" name="model_id">
+                <option value="">-- Selecione o modelo --</option>
+                @foreach ($vehicle_models as $vehicle_model)
+                    <option value="{{$vehicle_model->id}}" {{ ( $vehicle_model->id == $vehicle->model_id) ? 'selected' : '' }}> {{ $vehicle_model->name }} </option>
+                @endforeach
+            </select>
             <label>Preço</label>
             <input type="number" placeholder="0.00" name="price" min="0" step="0.01" pattern="^\d+(?:\.\d{1,2})?$" value="{{$vehicle->price}}"/>
             <label>Imagem</label>
