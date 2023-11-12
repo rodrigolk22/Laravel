@@ -1,4 +1,4 @@
-<h1>Laravel project using VS Code, XAMPP</h1> 
+<h1>Laravel CRUD Vehicle project</h1> 
 
 <p align="center">
 <img src="https://img.shields.io/badge/PHP-8.2.12-green?style=flat" alt="PHP" />
@@ -8,17 +8,15 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-
-
 ## Project Description 
 
 <p align="justify">
-  A sample Laravel project using VS Code IDE. 
+  A Laravel CRUD project using VS Code IDE with XAMPP. 
 </p>
 
 ## Functions
 
-:heavy_check_mark: Run a Laravel application
+:heavy_check_mark: CRUD for vehicles
 
 ## Requirements
 
@@ -27,31 +25,37 @@
 - [Composer](https://getcomposer.org/download/)
 - [MySQL](https://www.mysql.com/)
 
-## How to run the project :arrow_forward:
+## How to set and run the project :arrow_forward:
 
-- Create a local MySQL database using XAMPP
+<h4>MySQL settings</h4>
 
-- After installation set a password for root user in MySql Database
-> mysqladmin.exe -u root password root
+- If you already have a MySQL installed, update the .env and database.php with you settings.
 
-- Add this code in C:\xampp\apache\conf\extrahttpd-vhosts.conf
+- If you dont have a local MySQL database, install and run XAMPP (for windows users)
 
-```script
-<VirtualHost *:80>
-    DocumentRoot "C:/xampp/htdocs"
-    ServerName localhost
-</VirtualHost>
-```
+  - Include this code in C:\xampp\apache\conf\extrahttpd-vhosts.conf
 
-- Use phpMyAdmin to create a database with a name 'laravel'
+    ```script
+    <VirtualHost *:80>
+        DocumentRoot "C:/xampp/htdocs"
+        ServerName localhost
+    </VirtualHost>
+    ```
 
-- In terminal run php artisan migrate
+  - set password root for root user
+    > mysqladmin.exe -u root password root
 
-- run npm
+  - Use phpMyAdmin to create a database with a name 'laravel'
 
-> npm run dev
+<h4>MySQL tables</h4>
 
-- Run artisan
+- In terminal run php artisan migrate to create tables
+
+> run php artisan migrate
+
+<h4>Run laravel</h4>
+
+- Run artisan serve
 
 > php artisan serve
 
