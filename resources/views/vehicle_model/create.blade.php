@@ -6,8 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Crie uma marca</h1>
-    <form method="post" action="{{route('brand.store')}}">
+    <h1>Crie um modelo de veículo</h1>
+    <form method="post" action="{{route('vehicle_model.store')}}">
         @csrf
         @method('post')
         <div>
