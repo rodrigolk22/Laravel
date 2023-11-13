@@ -40,7 +40,7 @@
                     <td>{{$vehicle->brand->name}}</td>
                     <td>{{$vehicle->model->name}}</td>
                     <td>R$ {{number_format($vehicle->price, 2, ',', '.')}}</td>
-                    <td><img src="{{ url('storage//'.$vehicle->image_path) }}" alt=""></td>
+                    <td><img src="{{ url('storage//'.$vehicle->image_path) }}" class="image" alt=""></td>
                     <td>
                         <a href="{{route('vehicle.edit', ['vehicle' => $vehicle])}}">Editar</a>
                     </td>

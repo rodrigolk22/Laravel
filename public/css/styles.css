@@ -81,6 +81,10 @@ a{
     font-size: 1em;
 }
 
+.image{
+    max-width: 300px;
+}
+
 input[type=button], input[type=submit], input[type=reset]{
     background-color: rgb(238, 116, 116);
     color: white;
