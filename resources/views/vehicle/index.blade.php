@@ -3,32 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="{{ URL::asset('css/styles.css') }}" rel="stylesheet" type="text/css" >
+    <title>Veículos</title>
 </head>
 <body>
+    
+    <div class="container">
     <h1>Veículos</h1>
-    <div>
-        @if(session()->has('success'))
-            <div>
-                {{session('success')}}
-            </div>
-        @endif
-    </div>
-    <div>
         <div>
-            <a href="{{route('vehicle.create')}}">Criar veículo</a>
+            @if(session()->has('success'))
+                <div>
+                    {{session('success')}}
+                </div>
+            @endif
         </div>
-        <table border="1">
-            <tr>
-                <th>Id</th>
-                <th>Nome</th>
-                <th>Marca</th>
-                <th>Modelo</th>
-                <th>Preço</th>
-                <th>Imagem</th>
-                <th>Editar</th>
-                <th>Excluir</th>
-            </tr>
+        <a class="new" href="{{route('vehicle.create')}}">Criar veículo</a>
+        <a href="{{route('dashboard')}}">Retornar</a>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Preço</th>
+                    <th>Imagem</th>
+                    <th>Editar</th>
+                    <th>Excluir</th>
+                </tr>
+            </thead>
+            <tbody>
             @foreach($vehicles as $vehicle)
                 <tr>
                     <td>{{$vehicle->id}}</td>
@@ -49,6 +53,7 @@
                     </td>
                 </tr>
             @endforeach
+            </tbody>
         </table>
     </div>
 </body>

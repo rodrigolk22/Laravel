@@ -3,28 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="{{ URL::asset('css/styles.css') }}" rel="stylesheet" type="text/css" >
+    <title>Modelos</title>
 </head>
 <body>
-    <h1>Modelos</h1>
-    <div>
-        @if(session()->has('success'))
-            <div>
-                {{session('success')}}
-            </div>
-        @endif
-    </div>
-    <div>
+    <div class="container">
+        <h1>Modelos</h1>
         <div>
-            <a href="{{route('vehicle_model.create')}}">Criar modelo</a>
+            @if(session()->has('success'))
+                <div>
+                    {{session('success')}}
+                </div>
+            @endif
         </div>
-        <table border="1">
-            <tr>
-                <th>Id</th>
-                <th>Nome</th>
-                <th>Editar</th>
-                <th>Excluir</th>
-            </tr>
+        <div>
+            <a class="new" href="{{route('vehicle_model.create')}}">Criar modelo</a>
+            <a href="{{route('dashboard')}}">Retornar</a>
+        </div>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Editar</th>
+                    <th>Excluir</th>
+                </tr>
+            </thead>
+            <tbody>
             @foreach($vehicle_models as $vehicle_model)
                 <tr>
                     <td>{{$vehicle_model->id}}</td>
@@ -41,6 +46,7 @@
                     </td>
                 </tr>
             @endforeach
+            </tbody>
         </table>
     </div>
 </body>

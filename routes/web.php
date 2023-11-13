@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VehicleController;
 use App\Http\Controllers\VehicleModelController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,15 +22,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::get('/linkstorage', function () {
-    Artisan::call('storage:link');
-});
-
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', 'verified'])->group(function () {
     /* Profile routes */
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -55,6 +48,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/brand/{brand}/edit', [BrandController::class, 'edit'])->name('brand.edit');
     Route::put('/brand/{brand}/update', [BrandController::class, 'update'])->name('brand.update');
     Route::delete('/brand/{brand}/delete', [BrandController::class, 'delete'])->name('brand.delete');
+    /* Dashboard */
+    Route::get('/dashboard', function () {return view('dashboard');})->name('dashboard');
 });
 
 require __DIR__.'/auth.php';
