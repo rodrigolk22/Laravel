@@ -11,7 +11,7 @@
         <h1>Modelos</h1>
         <div>
             @if(session()->has('success'))
-                <div>
+                <div class="success">
                     {{session('success')}}
                 </div>
             @endif

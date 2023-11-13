@@ -34,7 +34,7 @@
                 </option>
                 @endforeach
             </select>
-            <p>Preço</p>
+            <p>Preço (R$)</p>
             <input type="number" placeholder="0.00" required name="price" min="0" value="0" step="0.01" pattern="^\d+(?:\.\d{1,2})?$"/>
             <p>Imagem</p>
             <input type="file" name="image_path" placeholder="imagem"/>

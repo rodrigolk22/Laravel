@@ -12,7 +12,7 @@
     <h1>Veículos</h1>
         <div>
             @if(session()->has('success'))
-                <div>
+                <div class="success">
                     {{session('success')}}
                 </div>
             @endif
@@ -26,7 +26,7 @@
                     <th>Nome</th>
                     <th>Marca</th>
                     <th>Modelo</th>
-                    <th>Preço</th>
+                    <th>Preço (R$)</th>
                     <th>Imagem</th>
                     <th>Editar</th>
                     <th>Excluir</th>

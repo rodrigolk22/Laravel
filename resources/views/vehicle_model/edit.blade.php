@@ -18,7 +18,7 @@
             <input type="text" name="name" placeholder="nome" value="{{$vehicle_model->name}}"/>
         </div>
         <div>
-            <input type="submit" value="Salvar"/>
+            <input class="new" type="submit" value="Salvar"/>
             <a class="cancel"  href="{{route('vehicle_model.index')}}">Cancelar</a>
         <div>
     </form>

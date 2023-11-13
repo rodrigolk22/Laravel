@@ -30,13 +30,13 @@
                     <option value="{{$vehicle_model->id}}" {{ ( $vehicle_model->id == $vehicle->model_id) ? 'selected' : '' }}> {{ $vehicle_model->name }} </option>
                 @endforeach
             </select>
-            <p>Preço</p>
+            <p>Preço (R$)</p>
             <input type="number" placeholder="0.00" name="price" min="0" step="0.01" pattern="^\d+(?:\.\d{1,2})?$" value="{{$vehicle->price}}"/>
             <p>Imagem</p>
             <input type="file" name="image_path" value="{{$vehicle->image_path}}"/>
         </div>
         <div>
-            <input type="submit" value="Salvar"/>
+            <input class="new" type="submit" value="Salvar"/>
             <a class="cancel"  href="{{route('vehicle.index')}}">Cancelar</a>
         <div>
     </form>

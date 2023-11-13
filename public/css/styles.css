@@ -76,6 +76,11 @@ a{
     border-radius: 4px;
 }
 
+.success{
+    padding-bottom: 20px;
+    font-size: 1em;
+}
+
 input[type=button], input[type=submit], input[type=reset]{
     background-color: rgb(238, 116, 116);
     color: white;

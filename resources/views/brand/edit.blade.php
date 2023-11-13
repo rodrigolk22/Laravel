@@ -18,7 +18,7 @@
             <input type="text" name="name" placeholder="nome" value="{{$brand->name}}"/>
         </div>
         <div>
-            <input type="submit" value="Salvar"/>
+            <input class="new" type="submit" value="Salvar"/>
             <a class="cancel"  href="{{route('brand.index')}}">Cancelar</a>
         <div>
     </form>
