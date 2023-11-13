@@ -39,7 +39,7 @@
                     <td>{{$vehicle->name}}</td>
                     <td>{{$vehicle->brand->name}}</td>
                     <td>{{$vehicle->model->name}}</td>
-                    <td>{{$vehicle->price}}</td>
+                    <td>R$ {{number_format($vehicle->price, 2, ',', '.')}}</td>
                     <td><img src="{{ url('storage//'.$vehicle->image_path) }}" alt=""></td>
                     <td>
                         <a href="{{route('vehicle.edit', ['vehicle' => $vehicle])}}">Editar</a>

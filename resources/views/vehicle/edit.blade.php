@@ -31,7 +31,7 @@
                 @endforeach
             </select>
             <p>Preço (R$)</p>
-            <input type="number" placeholder="0.00" name="price" min="0" step="0.01" pattern="^\d+(?:\.\d{1,2})?$" value="{{$vehicle->price}}"/>
+            <input type="number" name="price" value="{{$vehicle->price}}"/>
             <p>Imagem</p>
             <input type="file" name="image_path" value="{{$vehicle->image_path}}"/>
         </div>
