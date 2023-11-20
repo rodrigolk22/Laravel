@@ -76,6 +76,11 @@ If you runnig this app in Windows, will need set a symlink to show images proper
 
 > php artisan storage:link
 
+If you want to upload big images pelase change this lines in php.ini:
+
+> upload_max_filesize
+> post_max_size
+
 - Finally run the application:
 
 > php artisan serve
