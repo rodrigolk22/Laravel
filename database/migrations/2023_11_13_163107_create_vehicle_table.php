@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('brand_id');
             $table->foreign('brand_id')->references('id')->on('brand');
             $table->unsignedBigInteger('model_id');
-            $table->foreign('vehicle_model_id')->references('id')->on('vehicle_model');
+            $table->foreign('model_id')->references('id')->on('vehicle_model');
             $table->decimal('price');
             $table->string('image_path')->nullable();
             $table->timestamps();

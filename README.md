@@ -27,6 +27,12 @@
 
 ## How to set and run the project :arrow_forward:
 
+<h4>Project settings</h4>
+
+Run composer for install all dependencies
+
+> composer install
+
 <h4>MySQL settings</h4>
 
 - If you already have a MySQL installed, update the .env and database.php with you settings.
@@ -51,9 +57,20 @@
 
 - In terminal run php artisan migrate to create tables
 
-> run php artisan migrate
+> php artisan migrate
 
 <h4>Run laravel</h4>
+
+- Check if ".env" exists in root of project. Is was created a file ".env.example", please rename to ".env".
+
+- Generate a key:
+
+> php artisan key:generate
+
+- Set node libs:
+
+> npm install
+> npm run build 
 
 - Run artisan serve
 
