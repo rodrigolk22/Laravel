@@ -81,15 +81,17 @@ Run composer for install all dependencies
 - Set node libs:
 
 > npm install
+
 > npm run build 
 
 If you runnig this app in Windows, will need set a symlink to show images properly. Run this command:
 
 > php artisan storage:link
 
-If you want to upload big images pelase change this lines in php.ini:
+If you want to upload big images, you must change this lines in php.ini:
 
 > upload_max_filesize
+
 > post_max_size
 
 - Finally run the application:
