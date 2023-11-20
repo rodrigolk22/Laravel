@@ -18,6 +18,17 @@
 
 :heavy_check_mark: CRUD for vehicles
 
+## Screenshots
+
+<h4>Vehicles index screen</h4>
+<img src="layout_images/veiculos.png" width="350" title="Tela de veículos">
+<h4>Vehicles creation screen</h4>
+<img src="layout_images/criar_veiculo.png" width="350" title="Tela de criacao de veículos">
+<h4>Brands creation screen</h4>
+<img src="layout_images/marcas.png" width="350" title="Tela de marcas">
+<h4>Models creation screen</h4>
+<img src="layout_images/modelos.png" width="350" title="Tela de modelos">
+
 ## Requirements
 
 - [Visual Studio Code](https://code.visualstudio.com/download)
