@@ -72,11 +72,17 @@ Run composer for install all dependencies
 > npm install
 > npm run build 
 
-- Run artisan serve
+If you runnig this app in Windows, will need set a symlink to show images properly. Run this command:
+
+> php artisan storage:link
+
+- Finally run the application:
 
 > php artisan serve
 
-- access http://127.0.0.1:8000
+- access http://127.0.0.1:8000/
+
+- On top-right of the welcome, page create a new user account
 
 
 ## Languages, dependencies and libs used :books:
